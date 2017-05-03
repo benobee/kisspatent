@@ -1,9 +1,15 @@
+.handCursor.SentryHello{
+    display:flex !important;
+    justify-content:center;
+}
+
 .calendar-block {
     min-height: 420px;
 }
 .sqs-edit-mode {
-    #blog-open-content-58f7b778ebbd1a4f12a57bb3 {
+    #blog-open-content-5908af2cbe6594bddd432809 {
         padding: 2em;
+        margin-top:2em;
     }
 }
 hr {
@@ -26,13 +32,15 @@ hr {
             margin-right: 2%;
             margin-bottom: 3.8em;
             .entry-title {
-                font-weight: 300;
-                font-size: 1.6em !important;
+                font-weight: 400;
+                font-size: 20px !important;
+                line-height: 1.2em;
             }
             .image {
-                background-size: cover;
+                background-size: contain;
+                background-repeat:no-repeat;
                 background-position: center center;
-                min-height: 250px;
+                min-height: 150px;
             }
         }
         .hentry {
@@ -42,6 +50,10 @@ hr {
         }
     }
     &.view-item {
+        .hentry{
+          max-width:700px;
+          margin:0 auto;
+        }
         .body.entry-content {
             margin-bottom: 1em;
         }
@@ -60,9 +72,14 @@ hr {
             .collection-item {
                 width: 23%;
                 margin-right: 2%;
+                margin-bottom:1.5em;
+                @media screen and (max-width:768px){
+                  width:48%;
+                }
                 .image {
-                    background-size: cover;
-                    min-height: 150px;
+                    background-size: contain;
+                    background-repeat:no-repeat;
+                    min-height: 100px;
                 }
             }
         }
@@ -81,7 +98,7 @@ hr {
     }
     .main-content {
         display: flex;
-        @media screen and (max-width:768px) {
+        @media screen and (max-width:1000px) {
             flex-direction: column !important;
             .article-list.hfeed, .article-wrapper, #sidebar {
                 width: 100% !important;
@@ -89,6 +106,7 @@ hr {
                     padding-right: 0 !important;
                 }
                 .sqs-layout {
+                    padding-right:0 !important;
                     padding-left: 0em !important;
                     border-left: 0px solid #efefef !important;
                 }
@@ -109,21 +127,16 @@ hr {
         }
         #sidebar {
             width: 30%;
-            .category-wrapper {
-                .category {
-                    display: flex;
-                    flex-direction: column;
-                    flex-wrap: wrap;
-                    a {
-                        font-size: 1.2em;
-                        line-height: 1.5em;
-                        text-transform: uppercase;
-                    }
-                }
+            .sqs-block-button{
+              padding-bottom:0;
+              a{
+                width:100%;
+                max-width:200px;
+              }
             }
             .sqs-layout {
                 border-left: 1px solid #efefef;
-                padding-left: 2em;
+                padding-left:1em;
                 height: 100%;
             }
         }
