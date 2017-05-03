@@ -1,3 +1,6 @@
+/*** 
+CSS Bundle Created @   https://github.com/benobee/kisspatent ***/
+
 .handCursor.SentryHello{
     display:flex !important;
     justify-content:center;
@@ -31,16 +34,17 @@ hr {
             width: 31.333%;
             margin-right: 2%;
             margin-bottom: 3.8em;
+            @media screen and (max-width:768px) {
+              width:100%;
+            }
             .entry-title {
                 font-weight: 400;
                 font-size: 20px !important;
                 line-height: 1.2em;
             }
-            .image {
-                background-size: contain;
-                background-repeat:no-repeat;
-                background-position: center center;
-                min-height: 150px;
+            img{
+              width:100%;
+              height:auto;
             }
         }
         .hentry {
@@ -76,10 +80,9 @@ hr {
                 @media screen and (max-width:768px){
                   width:48%;
                 }
-                .image {
-                    background-size: contain;
-                    background-repeat:no-repeat;
-                    min-height: 100px;
+               img{
+                  width:100%;
+                  height:auto;
                 }
             }
         }
